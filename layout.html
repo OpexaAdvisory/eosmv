@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Chart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
         .process-chart {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
             margin: 20px;
         }
+        .process-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
         .process {
-            background-color: #f4f4f4;
-            border: 2px solid #ccc;
+            background-color: white;
+            border: 2px solid #2c3e50;
             border-radius: 10px;
             width: 200px;
             text-align: center;
@@ -25,42 +34,108 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #2c3e50;
         }
         .process:hover {
-            background-color: #e0e0e0;
+            background-color: #dfe6e9;
             transform: translateY(-10px);
         }
-        .process a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
+        .arrow {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #2c3e50;
         }
-        .process a:hover {
-            text-decoration: underline;
+        .management-processes, .core-processes, .supporting-processes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .process-container {
+            background-color: #dfe6e9;
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .process-title {
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+        .process-description {
+            font-weight: 300;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+        .label {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="process-chart">
-        <div class="process">
-            <h2>Process 1</h2>
-            <p>Description of Process 1</p>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
+        <div class="label">Managementprozesse</div>
+        <div class="management-processes">
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Management-Prozess I</div>
+                <div class="process-description">Description of Management Process I</div>
+            </a>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Management-Prozess II</div>
+                <div class="process-description">Description of Management Process II</div>
+            </a>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Management-Prozess n</div>
+                <div class="process-description">Description of Management Process n</div>
+            </a>
         </div>
-        <div class="process">
-            <h2>Process 2</h2>
-            <p>Description of Process 2</p>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
+        
+        <div class="label">Kernprozesse</div>
+        <div class="core-processes process-container">
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Kernprozess I</div>
+                <div class="process-description">Description of Core Process I</div>
+            </a>
+            <span class="arrow">→</span>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Kernprozess II</div>
+                <div class="process-description">Description of Core Process II</div>
+            </a>
+            <span class="arrow">→</span>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Kernprozess ...</div>
+                <div class="process-description">Description of Core Process ...</div>
+            </a>
+            <span class="arrow">→</span>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Kernprozess n</div>
+                <div class="process-description">Description of Core Process n</div>
+            </a>
         </div>
-        <div class="process">
-            <h2>Process 3</h2>
-            <p>Description of Process 3</p>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
-        </div>
-        <div class="process">
-            <h2>Process 4</h2>
-            <p>Description of Process 4</p>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
+        
+        <div class="label">Unterstützungsprozesse</div>
+        <div class="supporting-processes">
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Unterstützungs-Prozess I</div>
+                <div class="process-description">Description of Supporting Process I</div>
+            </a>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Unterstützungs-Prozess II</div>
+                <div class="process-description">Description of Supporting Process II</div>
+            </a>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process">
+                <div class="process-title">Unterstützungs-Prozess n</div>
+                <div class="process-description">Description of Supporting Process n</div>
+            </a>
         </div>
     </div>
 </body>
