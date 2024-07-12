@@ -3,81 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management Lines</title>
+    <title>Process Chart</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+        }
+        .process-chart {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            text-align: center;
-        }
-        .center-circle {
-            display: inline-block;
-            background-color: #fff;
-            border-radius: 50%;
-            padding: 40px 60px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .line-container {
-            display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 20px;
         }
-        .line-item {
-            width: 45%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background-color: #003366;
-            color: #fff;
-            border-radius: 25px;
-            padding: 15px;
+        .process {
+            background-color: #f4f4f4;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .process:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-10px);
+        }
+        .process a {
             text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
         }
-        .line-item img {
-            margin-right: 10px;
+        .process a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="center-circle">
-            What line are you working on Today?
+    <div class="process-chart">
+        <div class="process">
+            <h2>Process 1</h2>
+            <p>Description of Process 1</p>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
         </div>
-        <div class="line-container">
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon1.png" alt="Risk Management"> Risk Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon2.png" alt="Process Management"> Process Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon3.png" alt="Strategy Management"> Strategy Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon4.png" alt="Supply Chain Management"> Supply Chain Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon5.png" alt="Stakeholder Management"> Stakeholder Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon6.png" alt="Policy Management"> Policy Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon7.png" alt="Measures Management"> Measures Management
-            </a>
-            <a href="https://www.pixhance.com" class="line-item">
-                <img src="icon8.png" alt="Audit Management"> Audit Management
-            </a>
+        <div class="process">
+            <h2>Process 2</h2>
+            <p>Description of Process 2</p>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
+        </div>
+        <div class="process">
+            <h2>Process 3</h2>
+            <p>Description of Process 3</p>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
+        </div>
+        <div class="process">
+            <h2>Process 4</h2>
+            <p>Description of Process 4</p>
+            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" target="_blank">Learn More</a>
         </div>
     </div>
 </body>
