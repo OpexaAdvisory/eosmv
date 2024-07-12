@@ -3,139 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Process Chart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Next Gen Security</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
+            background: linear-gradient(ffffff);
             margin: 0;
-            padding: 0;
-        }
-        .process-chart {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-        .process-row {
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px 0;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            max-height: 700px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-sizing: border-box;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #001F3F;
+            margin-bottom: 20px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .section-title {
+            font-weight: 600;
+            color: #001F3F;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .process-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
         .process {
-            background-color: white;
-            border: 2px solid #2c3e50;
-            border-radius: 10px;
-            width: 200px;
+            flex: 1;
+            padding: 10px;
             text-align: center;
-            margin: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, background-color 0.3s;
+            color: #001F3F;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            text-decoration: none;
-            color: #2c3e50;
+            width: 150px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         .process:hover {
-            background-color: #dfe6e9;
-            transform: translateY(-10px);
+            background-color: rgba(0, 31, 63, 0.8);
+            color: #FFFFFF;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 31, 63, 0.2);
         }
-        .arrow {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #2c3e50;
+        .core-process {
+            background: rgba(200, 220, 240, 0.3);
         }
-        .management-processes, .core-processes, .supporting-processes {
+        .footer {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #001F3F;
         }
-        .process-container {
-            background-color: #dfe6e9;
-            border: 2px solid #2c3e50;
-            border-radius: 10px;
-            padding: 20px;
-            width: 90%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .process-title {
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-size: 20px;
-            color: #2c3e50;
-        }
-        .process-description {
-            font-weight: 300;
-            font-size: 14px;
-            color: #2c3e50;
-        }
-        .label {
-            font-weight: 600;
-            font-size: 18px;
-            color: #2c3e50;
-            margin-bottom: 10px;
+        a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="process-chart">
-        <div class="label">V.3 Managementprozesse</div>
-        <div class="management-processes">
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Management-Prozess I</div>
-                <div class="process-description">Description of Management Process I</div>
-            </a>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Management-Prozess II</div>
-                <div class="process-description">Description of Management Process II</div>
-            </a>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Management-Prozess n</div>
-                <div class="process-description">Description of Management Process n</div>
-            </a>
+    <div class="container">
+        <div class="title">Next Gen Security</div>
+        
+        <div class="section">
+            <div class="section-title">Management Processes</div>
+            <div class="process-grid">
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">General Management Process</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Finance & Controlling</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Complaint Management</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">HR</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Sub-Management Systems</a>
+            </div>
         </div>
         
-        <div class="label">Kernprozesse</div>
-        <div class="core-processes process-container">
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Kernprozess I</div>
-                <div class="process-description">Description of Core Process I</div>
-            </a>
-            <span class="arrow">→</span>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Kernprozess II</div>
-                <div class="process-description">Description of Core Process II</div>
-            </a>
-            <span class="arrow">→</span>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Kernprozess ...</div>
-                <div class="process-description">Description of Core Process ...</div>
-            </a>
-            <span class="arrow">→</span>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Kernprozess n</div>
-                <div class="process-description">Description of Core Process n</div>
-            </a>
+        <div class="section">
+            <div class="section-title">Core Processes</div>
+            <div class="process-grid">
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Development</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Distribution</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Acquisition</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Requirements & Expectations</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Sales & Marketing</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Results</a>
+            </div>
         </div>
         
-        <div class="label">Unterstützungsprozesse</div>
-        <div class="supporting-processes">
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Unterstützungs-Prozess I</div>
-                <div class="process-description">Description of Supporting Process I</div>
-            </a>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Unterstützungs-Prozess II</div>
-                <div class="process-description">Description of Supporting Process II</div>
-            </a>
-            <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15435352/01+-+Kontext+ihres+Unternehmens+betriebliche+Planung" class="process" target="_blank">
-                <div class="process-title">Unterstützungs-Prozess n</div>
-                <div class="process-description">Description of Supporting Process n</div>
-            </a>
+        <div class="section">
+            <div class="section-title">Support Processes</div>
+            <div class="process-grid">
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">IT Service Management</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Quality Check</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>Version 1.2</div>
+            <div>Date: 12.07.2024</div>
+            <div>Author: Enterprise Lead Architect</div>
+            <div>Approved by: Kilvinger (CEO)</div>
         </div>
     </div>
 </body>
