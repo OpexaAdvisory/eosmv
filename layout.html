@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opexa Template GmbH</title>
+    <title>OPEXA Advisory GmbH</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(ffffff);
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             margin: 0;
             padding: 20px;
             display: flex;
@@ -27,6 +27,9 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         .title {
             text-align: center;
@@ -37,8 +40,8 @@
         }
         .section {
             background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            padding: 10px;
+            border-radius: 20px;
+            padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -52,16 +55,16 @@
         .process-grid {
             display: flex;
             gap: 10px;
-            flex-wrap: nowrap;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
         .process {
-            flex: 1;
+            flex: 1 1 150px;
             padding: 10px;
             text-align: center;
             color: #001F3F;
             background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
+            border-radius: 15px;
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
             cursor: pointer;
             width: 150px;
@@ -80,9 +83,6 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 31, 63, 0.2);
         }
-        .core-process {
-            background: rgba(200, 220, 240, 0.3);
-        }
         .footer {
             display: flex;
             justify-content: space-between;
@@ -96,48 +96,89 @@
             width: 100%;
             height: 100%;
         }
+        .hexagon {
+            width: 120px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.3);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .hexagon:before, .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 35px solid rgba(255, 255, 255, 0.3);
+        }
+        .hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 35px solid rgba(255, 255, 255, 0.3);
+        }
+        .arrow {
+            width: 120px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.3);
+            clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%, 20% 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="title">Next Gen Security</div>
+        <div class="title">OPEXA Advisory GmbH</div>
         
         <div class="section">
             <div class="section-title">Management Processes</div>
             <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">General Management Process</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Finance & Controlling</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Complaint Management</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">HR</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Sub-Management Systems</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Geschäftsführung</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Kundenzufriedenheit & Reklamationsmanagement</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Finance & Controlling</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Human Ressource Management (HR)</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Information Security Management</a>
             </div>
         </div>
         
         <div class="section">
             <div class="section-title">Core Processes</div>
             <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Development</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Distribution</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Acquisition</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Requirements & Expectations</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Sales & Marketing</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Results</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="arrow">Marketing</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="arrow">Sales Process</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="arrow">Informationssicherheitsberatung / CISOaaS</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="arrow">Customer Support</a>
             </div>
         </div>
         
         <div class="section">
             <div class="section-title">Support Processes</div>
             <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">IT Service Management</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Quality Check</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">IT / IT-Service-Management</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="arrow">Development Process</a>
+                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="hexagon">Quality Assurance</a>
             </div>
         </div>
         
         <div class="footer">
             <div>Version 1.2</div>
             <div>Date: 12.07.2024</div>
-            <div>Author: Enterprise Lead Architect</div>
-            <div>Approved by: Kilvinger (CEO)</div>
+            <div>Author: <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank">Enterprise Lead Architect</a></div>
+            <div>Approved by: <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank">Kilvinger (CEO)</a></div>
         </div>
     </div>
 </body>
