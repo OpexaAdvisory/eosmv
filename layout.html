@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opexa Template GmbH</title>
+    <title>OPEXA Advisory GmbH</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(ffffff);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         .container {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            max-height: 700px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            max-width: 1400px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            border-radius: 20px;
         }
         .title {
             text-align: center;
@@ -36,52 +34,60 @@
             margin-bottom: 20px;
         }
         .section {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
+            border: 1px solid rgba(0, 31, 63, 0.18);
             padding: 10px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 31, 63, 0.05);
         }
         .section-title {
             font-weight: 600;
             color: #001F3F;
             margin-bottom: 10px;
-            text-align: center;
         }
         .process-grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             gap: 10px;
-            flex-wrap: nowrap;
-            justify-content: space-between;
+            align-items: center;
         }
         .process {
-            flex: 1;
+            border: 1px solid rgba(0, 31, 63, 0.18);
             padding: 10px;
             text-align: center;
             color: #001F3F;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
             border-radius: 10px;
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            width: 150px;
-            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            position: relative;
         }
-        .process:hover {
-            background-color: rgba(0, 31, 63, 0.8);
-            color: #FFFFFF;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 31, 63, 0.2);
+        .process.large {
+            grid-column: span 2;
+            height: 100px;
         }
-        .core-process {
-            background: rgba(200, 220, 240, 0.3);
+        .process.tall {
+            grid-row: span 2;
+        }
+        .process.pentagon {
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            height: 100px;
+        }
+        .process.arrow::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 20px solid rgba(0, 31, 63, 0.18);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
         }
         .footer {
             display: flex;
@@ -100,39 +106,51 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">Next Gen Security</div>
-        
+        <div class="title">OPEXA Advisory GmbH</div>
+
         <div class="section">
             <div class="section-title">Management Processes</div>
-            <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">General Management Process</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Finance & Controlling</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Complaint Management</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">HR</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Sub-Management Systems</a>
+            <div class="process-grid" style="grid-template-columns: 1fr 2fr;">
+                <div class="process">Layer 1</div>
+                <a href="#" target="_blank" class="process arrow">Geschäftsführung</a>
+                <div class="process">Layer 2</div>
+                <a href="#" target="_blank" class="process arrow">Kundenzufriedenheit & Reklamationsmanagement</a>
+                <a href="#" target="_blank" class="process arrow">Finance & Controlling</a>
+                <a href="#" target="_blank" class="process arrow">Human Ressource Management (HR)</a>
+                <a href="#" target="_blank" class="process arrow">Information Security Management</a>
+                <a href="#" target="_blank" class="process arrow">Kundenzufriedenheit & Reklamationsmanagement</a>
             </div>
         </div>
-        
+
         <div class="section">
-            <div class="section-title">Core Processes</div>
-            <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Development</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Distribution</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Acquisition</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Requirements & Expectations</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Sales & Marketing</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process core-process">Customer Results</a>
+            <div class="section-title">Management Process</div>
+            <div class="process-grid" style="grid-template-columns: 1fr 2fr 2fr;">
+                <div class="process tall">Customer Requirements & Expectations</div>
+                <div class="process">Layer 1</div>
+                <a href="#" target="_blank" class="process arrow">Sales Process</a>
+                <div class="process">Layer 2</div>
+                <a href="#" target="_blank" class="process arrow">Informationssicherheitsberatung / CISOaaS</a>
+                <div class="process">Layer 3</div>
+                <a href="#" target="_blank" class="process pentagon">Supplier Management Process</a>
+                <div class="process">Layer 4</div>
+                <a href="#" target="_blank" class="process arrow">Customer Support</a>
+                <div class="process">Layer 5</div>
+                <a href="#" target="_blank" class="process arrow">Development Process</a>
+                <div class="process tall">Customer Results</div>
             </div>
         </div>
-        
+
         <div class="section">
             <div class="section-title">Support Processes</div>
-            <div class="process-grid">
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">IT Service Management</a>
-                <a href="https://enterpriseos.atlassian.net/wiki/spaces/IMS/pages/15436119/K-002+Kernprozess+Softwareentwicklung" target="_blank" class="process">Quality Check</a>
+            <div class="process-grid" style="grid-template-columns: 1fr 2fr 1fr;">
+                <div class="process">Layer 1</div>
+                <a href="#" target="_blank" class="process pentagon">Marketing Process</a>
+                <div class="process">Layer 2</div>
+                <a href="#" target="_blank" class="process arrow">IT / IT-Service-Management</a>
+                <a href="#" target="_blank" class="process arrow">Quality Assurance</a>
             </div>
         </div>
-        
+
         <div class="footer">
             <div>Version 1.2</div>
             <div>Date: 12.07.2024</div>
